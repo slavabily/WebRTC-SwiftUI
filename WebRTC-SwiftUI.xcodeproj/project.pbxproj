@@ -26,6 +26,9 @@
 		F93E2B682679FBD90089EFDA /* SessionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B652679FBD90089EFDA /* SessionDescription.swift */; };
 		F93E2B6B2679FE290089EFDA /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B692679FE290089EFDA /* VideoViewController.swift */; };
 		F93E2B6C2679FE290089EFDA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B6A2679FE290089EFDA /* MainViewController.swift */; };
+		F93E2B70267A1B5A0089EFDA /* MainViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B6F267A1B5A0089EFDA /* MainViewRepresentable.swift */; };
+		F93E2B72267A7E070089EFDA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93E2B71267A7E070089EFDA /* MainViewController.xib */; };
+		F93E2B74267A87880089EFDA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B73267A87880089EFDA /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +51,9 @@
 		F93E2B652679FBD90089EFDA /* SessionDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDescription.swift; sourceTree = "<group>"; };
 		F93E2B692679FE290089EFDA /* VideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		F93E2B6A2679FE290089EFDA /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F93E2B6F267A1B5A0089EFDA /* MainViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRepresentable.swift; sourceTree = "<group>"; };
+		F93E2B71267A7E070089EFDA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		F93E2B73267A87880089EFDA /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,10 +88,11 @@
 		F93E2B392679EBBF0089EFDA /* WebRTC-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				F93E2B6A2679FE290089EFDA /* MainViewController.swift */,
-				F93E2B692679FE290089EFDA /* VideoViewController.swift */,
+				F93E2B6E267A0B660089EFDA /* VideoScreen */,
+				F93E2B6D267A0A450089EFDA /* MainScreen */,
 				F93E2B4E2679EDEE0089EFDA /* Services */,
 				F93E2B622679FB790089EFDA /* Extensions */,
+				F93E2B73267A87880089EFDA /* Config.swift */,
 				F93E2B3A2679EBBF0089EFDA /* AppDelegate.swift */,
 				F93E2B3C2679EBBF0089EFDA /* SceneDelegate.swift */,
 				F93E2B3E2679EBBF0089EFDA /* ContentView.swift */,
@@ -134,6 +141,24 @@
 				F93E2B652679FBD90089EFDA /* SessionDescription.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F93E2B6D267A0A450089EFDA /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F93E2B71267A7E070089EFDA /* MainViewController.xib */,
+				F93E2B6A2679FE290089EFDA /* MainViewController.swift */,
+				F93E2B6F267A1B5A0089EFDA /* MainViewRepresentable.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		F93E2B6E267A0B660089EFDA /* VideoScreen */ = {
+			isa = PBXGroup;
+			children = (
+				F93E2B692679FE290089EFDA /* VideoViewController.swift */,
+			);
+			path = VideoScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -204,6 +229,7 @@
 				F93E2B472679EBC40089EFDA /* LaunchScreen.storyboard in Resources */,
 				F93E2B442679EBC40089EFDA /* Preview Assets.xcassets in Resources */,
 				F93E2B412679EBC40089EFDA /* Assets.xcassets in Resources */,
+				F93E2B72267A7E070089EFDA /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,11 +247,13 @@
 				F93E2B5F2679FAD40089EFDA /* WebSocketProvider.swift in Sources */,
 				F93E2B6B2679FE290089EFDA /* VideoViewController.swift in Sources */,
 				F93E2B542679EE550089EFDA /* Message.swift in Sources */,
+				F93E2B70267A1B5A0089EFDA /* MainViewRepresentable.swift in Sources */,
 				F93E2B6C2679FE290089EFDA /* MainViewController.swift in Sources */,
 				F93E2B672679FBD90089EFDA /* RTCStates.swift in Sources */,
 				F93E2B682679FBD90089EFDA /* SessionDescription.swift in Sources */,
 				F93E2B3F2679EBBF0089EFDA /* ContentView.swift in Sources */,
 				F93E2B602679FAD40089EFDA /* NativeWebSocket.swift in Sources */,
+				F93E2B74267A87880089EFDA /* Config.swift in Sources */,
 				F93E2B522679EE550089EFDA /* WebRTCClient.swift in Sources */,
 				F93E2B662679FBD90089EFDA /* IceCandidate.swift in Sources */,
 			);

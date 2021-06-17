@@ -12,9 +12,9 @@ import WebRTC
 
 class MainViewController: UIViewController {
 
-    private let signalClient: SignalingClient
-    private let webRTCClient: WebRTCClient
-    private lazy var videoViewController = VideoViewController(webRTCClient: self.webRTCClient)
+    private let signalClient: SignalingClient?
+    private let webRTCClient: WebRTCClient?
+    private lazy var videoViewController = VideoViewController(webRTCClient: self.webRTCClient!)
     
     @IBOutlet private weak var speakerButton: UIButton?
     @IBOutlet private weak var signalingStatusLabel: UILabel?
@@ -108,31 +108,31 @@ class MainViewController: UIViewController {
         self.speakerOn = false
         self.webRTCStatusLabel?.text = "New"
         
-        self.webRTCClient.delegate = self
-        self.signalClient.delegate = self
-        self.signalClient.connect()
+        self.webRTCClient?.delegate = self
+        self.signalClient?.delegate = self
+        self.signalClient?.connect()
     }
     
     @IBAction private func offerDidTap(_ sender: UIButton) {
-        self.webRTCClient.offer { (sdp) in
+        self.webRTCClient?.offer { (sdp) in
             self.hasLocalSdp = true
-            self.signalClient.send(sdp: sdp)
+            self.signalClient?.send(sdp: sdp)
         }
     }
     
     @IBAction private func answerDidTap(_ sender: UIButton) {
-        self.webRTCClient.answer { (localSdp) in
+        self.webRTCClient?.answer { (localSdp) in
             self.hasLocalSdp = true
-            self.signalClient.send(sdp: localSdp)
+            self.signalClient?.send(sdp: localSdp)
         }
     }
     
     @IBAction private func speakerDidTap(_ sender: UIButton) {
         if self.speakerOn {
-            self.webRTCClient.speakerOff()
+            self.webRTCClient?.speakerOff()
         }
         else {
-            self.webRTCClient.speakerOn()
+            self.webRTCClient?.speakerOn()
         }
         self.speakerOn = !self.speakerOn
     }
@@ -144,10 +144,10 @@ class MainViewController: UIViewController {
     @IBAction private func muteDidTap(_ sender: UIButton) {
         self.mute = !self.mute
         if self.mute {
-            self.webRTCClient.muteAudio()
+            self.webRTCClient?.muteAudio()
         }
         else {
-            self.webRTCClient.unmuteAudio()
+            self.webRTCClient?.unmuteAudio()
         }
     }
     
@@ -163,7 +163,7 @@ class MainViewController: UIViewController {
             guard let dataToSend = alert.textFields?.first?.text?.data(using: .utf8) else {
                 return
             }
-            self?.webRTCClient.sendData(dataToSend)
+            self?.webRTCClient?.sendData(dataToSend)
         }))
         self.present(alert, animated: true, completion: nil)
     }
@@ -180,13 +180,13 @@ extension MainViewController: SignalClientDelegate {
     
     func signalClient(_ signalClient: SignalingClient, didReceiveRemoteSdp sdp: RTCSessionDescription) {
         print("Received remote sdp")
-        self.webRTCClient.set(remoteSdp: sdp) { (error) in
+        self.webRTCClient?.set(remoteSdp: sdp) { (error) in
             self.hasRemoteSdp = true
         }
     }
     
     func signalClient(_ signalClient: SignalingClient, didReceiveCandidate candidate: RTCIceCandidate) {
-        self.webRTCClient.set(remoteCandidate: candidate) { error in
+        self.webRTCClient?.set(remoteCandidate: candidate) { error in
             print("Received remote candidate")
             self.remoteCandidateCount += 1
         }
@@ -198,7 +198,7 @@ extension MainViewController: WebRTCClientDelegate {
     func webRTCClient(_ client: WebRTCClient, didDiscoverLocalCandidate candidate: RTCIceCandidate) {
         print("discovered local candidate")
         self.localCandidateCount += 1
-        self.signalClient.send(candidate: candidate)
+        self.signalClient?.send(candidate: candidate)
     }
     
     func webRTCClient(_ client: WebRTCClient, didChangeConnectionState state: RTCIceConnectionState) {
