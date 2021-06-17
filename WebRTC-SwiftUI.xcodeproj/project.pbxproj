@@ -29,6 +29,7 @@
 		F93E2B70267A1B5A0089EFDA /* MainViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B6F267A1B5A0089EFDA /* MainViewRepresentable.swift */; };
 		F93E2B72267A7E070089EFDA /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F93E2B71267A7E070089EFDA /* MainViewController.xib */; };
 		F93E2B74267A87880089EFDA /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B73267A87880089EFDA /* Config.swift */; };
+		F9E8C4AC267B618500D286CA /* VideoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F9E8C4AB267B618500D286CA /* VideoViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		F93E2B6F267A1B5A0089EFDA /* MainViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRepresentable.swift; sourceTree = "<group>"; };
 		F93E2B71267A7E070089EFDA /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		F93E2B73267A87880089EFDA /* Config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		F9E8C4AB267B618500D286CA /* VideoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +90,8 @@
 		F93E2B392679EBBF0089EFDA /* WebRTC-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				F93E2B6E267A0B660089EFDA /* VideoScreen */,
 				F93E2B6D267A0A450089EFDA /* MainScreen */,
+				F93E2B6E267A0B660089EFDA /* VideoScreen */,
 				F93E2B4E2679EDEE0089EFDA /* Services */,
 				F93E2B622679FB790089EFDA /* Extensions */,
 				F93E2B73267A87880089EFDA /* Config.swift */,
@@ -156,6 +158,7 @@
 		F93E2B6E267A0B660089EFDA /* VideoScreen */ = {
 			isa = PBXGroup;
 			children = (
+				F9E8C4AB267B618500D286CA /* VideoViewController.xib */,
 				F93E2B692679FE290089EFDA /* VideoViewController.swift */,
 			);
 			path = VideoScreen;
@@ -229,6 +232,7 @@
 				F93E2B472679EBC40089EFDA /* LaunchScreen.storyboard in Resources */,
 				F93E2B442679EBC40089EFDA /* Preview Assets.xcassets in Resources */,
 				F93E2B412679EBC40089EFDA /* Assets.xcassets in Resources */,
+				F9E8C4AC267B618500D286CA /* VideoViewController.xib in Resources */,
 				F93E2B72267A7E070089EFDA /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
