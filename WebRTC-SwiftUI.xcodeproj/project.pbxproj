@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F91ED6BB267C681C0021FDF9 /* VideoViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6BA267C681C0021FDF9 /* VideoViewRepresentable.swift */; };
+		F91ED6BD267C87C60021FDF9 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6BC267C87C50021FDF9 /* ContainerView.swift */; };
+		F91ED6C2267CB9960021FDF9 /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6BF267CB9950021FDF9 /* Keyboard.swift */; };
+		F91ED6C3267CB9960021FDF9 /* WebSocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6C0267CB9960021FDF9 /* WebSocketTypes.swift */; };
+		F91ED6C4267CB9960021FDF9 /* WebSocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6C1267CB9960021FDF9 /* WebSocketController.swift */; };
+		F91ED6C6267CBA090021FDF9 /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F91ED6C5267CBA090021FDF9 /* SocketView.swift */; };
 		F93E2B3B2679EBBF0089EFDA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B3A2679EBBF0089EFDA /* AppDelegate.swift */; };
 		F93E2B3D2679EBBF0089EFDA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B3C2679EBBF0089EFDA /* SceneDelegate.swift */; };
 		F93E2B3F2679EBBF0089EFDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93E2B3E2679EBBF0089EFDA /* ContentView.swift */; };
@@ -33,6 +39,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F91ED6BA267C681C0021FDF9 /* VideoViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewRepresentable.swift; sourceTree = "<group>"; };
+		F91ED6BC267C87C50021FDF9 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
+		F91ED6BF267CB9950021FDF9 /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		F91ED6C0267CB9960021FDF9 /* WebSocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTypes.swift; sourceTree = "<group>"; };
+		F91ED6C1267CB9960021FDF9 /* WebSocketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketController.swift; sourceTree = "<group>"; };
+		F91ED6C5267CBA090021FDF9 /* SocketView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		F93E2B372679EBBF0089EFDA /* WebRTC-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WebRTC-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F93E2B3A2679EBBF0089EFDA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F93E2B3C2679EBBF0089EFDA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,6 +83,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F91ED6BE267CB93A0021FDF9 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				F91ED6BF267CB9950021FDF9 /* Keyboard.swift */,
+				F91ED6C1267CB9960021FDF9 /* WebSocketController.swift */,
+				F91ED6C0267CB9960021FDF9 /* WebSocketTypes.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
+		F91ED6C7267CBC3D0021FDF9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F93E2B3E2679EBBF0089EFDA /* ContentView.swift */,
+				F91ED6BC267C87C50021FDF9 /* ContainerView.swift */,
+				F91ED6C5267CBA090021FDF9 /* SocketView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		F93E2B2E2679EBBF0089EFDA = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +122,7 @@
 		F93E2B392679EBBF0089EFDA /* WebRTC-SwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				F91ED6BE267CB93A0021FDF9 /* Socket */,
 				F93E2B6D267A0A450089EFDA /* MainScreen */,
 				F93E2B6E267A0B660089EFDA /* VideoScreen */,
 				F93E2B4E2679EDEE0089EFDA /* Services */,
@@ -97,7 +130,7 @@
 				F93E2B73267A87880089EFDA /* Config.swift */,
 				F93E2B3A2679EBBF0089EFDA /* AppDelegate.swift */,
 				F93E2B3C2679EBBF0089EFDA /* SceneDelegate.swift */,
-				F93E2B3E2679EBBF0089EFDA /* ContentView.swift */,
+				F91ED6C7267CBC3D0021FDF9 /* Views */,
 				F93E2B402679EBC40089EFDA /* Assets.xcassets */,
 				F93E2B452679EBC40089EFDA /* LaunchScreen.storyboard */,
 				F93E2B482679EBC40089EFDA /* Info.plist */,
@@ -160,6 +193,7 @@
 			children = (
 				F9E8C4AB267B618500D286CA /* VideoViewController.xib */,
 				F93E2B692679FE290089EFDA /* VideoViewController.swift */,
+				F91ED6BA267C681C0021FDF9 /* VideoViewRepresentable.swift */,
 			);
 			path = VideoScreen;
 			sourceTree = "<group>";
@@ -246,11 +280,17 @@
 			files = (
 				F93E2B612679FAD40089EFDA /* StarscreamProvider.swift in Sources */,
 				F93E2B532679EE550089EFDA /* SignalingClient.swift in Sources */,
+				F91ED6BD267C87C60021FDF9 /* ContainerView.swift in Sources */,
 				F93E2B3B2679EBBF0089EFDA /* AppDelegate.swift in Sources */,
 				F93E2B3D2679EBBF0089EFDA /* SceneDelegate.swift in Sources */,
 				F93E2B5F2679FAD40089EFDA /* WebSocketProvider.swift in Sources */,
+				F91ED6C4267CB9960021FDF9 /* WebSocketController.swift in Sources */,
 				F93E2B6B2679FE290089EFDA /* VideoViewController.swift in Sources */,
+				F91ED6C3267CB9960021FDF9 /* WebSocketTypes.swift in Sources */,
+				F91ED6C6267CBA090021FDF9 /* SocketView.swift in Sources */,
+				F91ED6BB267C681C0021FDF9 /* VideoViewRepresentable.swift in Sources */,
 				F93E2B542679EE550089EFDA /* Message.swift in Sources */,
+				F91ED6C2267CB9960021FDF9 /* Keyboard.swift in Sources */,
 				F93E2B70267A1B5A0089EFDA /* MainViewRepresentable.swift in Sources */,
 				F93E2B6C2679FE290089EFDA /* MainViewController.swift in Sources */,
 				F93E2B672679FBD90089EFDA /* RTCStates.swift in Sources */,

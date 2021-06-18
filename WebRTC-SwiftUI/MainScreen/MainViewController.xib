@@ -114,7 +114,7 @@
                         <action selector="speakerDidTap:" destination="-1" eventType="touchUpInside" id="sar-D8-lYV"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-KE-sVk">
+                <button hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ibb-KE-sVk">
                     <rect key="frame" x="315" y="519" width="40" height="30"/>
                     <state key="normal" title="Video"/>
                     <connections>
